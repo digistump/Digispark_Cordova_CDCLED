@@ -1,0 +1,26 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Digicdc\"><param name=\"android-package\" value=\"com.digistump.digicdc.Digicdc\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.digistump.digicdc": {
+            "PACKAGE_NAME": "com.digistump.cdcled"
+        }
+    },
+    "dependent_plugins": {}
+}

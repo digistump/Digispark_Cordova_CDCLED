@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.digistump.digicdc"
+      version="0.1.0">
+    <name>Digicdc</name>
+    <description>PhoneGap Digicdc Plugin</description>
+    <license>CC-BY-SA 3.0</license>
+    <keywords>phonegap,digicdc</keywords>
+
+
+    <js-module src="www/digicdc.js" name="Digicdc">
+        <clobbers target="window.digicdc" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Digicdc">
+                <param name="android-package" value="com.digistump.digicdc.Digicdc"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Digicdc.java" target-dir="src/com/digistump/digicdc" /> 
+        <source-file src="lib/ftdriver.jar" target-dir="libs" />     
+     </platform>          
+</plugin>
